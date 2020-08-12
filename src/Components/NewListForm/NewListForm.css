@@ -1,0 +1,17 @@
+.new-list-form {
+    width: 50%;
+    margin: 10% 25%;
+}
+
+.new-list-form input {
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+.new-list-form button {
+    font-size: 1.3rem;
+    width: 100%;
+    border: 1px solid black;
+    margin: 5% 1%;
+    border-radius: 10px;
+}

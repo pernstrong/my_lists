@@ -8,8 +8,8 @@ const ListItemForm = ({ addItem, id }) => {
 
     const handleClick = e => {
         e.preventDefault()
-        console.log(id)
-        addItem(item, id)
+        const newItem = {text: item, isComplete: false}        
+        addItem(newItem, id)
         clearInputs()
     }
 

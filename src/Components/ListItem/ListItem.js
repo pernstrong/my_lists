@@ -4,7 +4,7 @@ import React from 'react'
 const ListItem = ({ item }) => {
 
     return (
-        <li>{item}</li>
+        <li>{item.text}</li>
     )
 }
 

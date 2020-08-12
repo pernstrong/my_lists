@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './NewListForm.css'
 import { addList } from '../../actions'
 import { connect } from 'react-redux'
 

@@ -14,12 +14,17 @@ const ListView = ({ lists, title }) => {
         updateList(current)
     }, [lists, title])
 
+    const deleteList = () => {
+        console.log(list.id)
+    }
+
     return (
         <section className="list-view">
             <h3>{title}</h3>
             {list.items && !list.items.length && <p>Add an item to see it here!</p>}
             {list.items && <ListItemsContainer items={list.items} />}
             <ListItemForm id={list.id}/>
+            <button onClick={deleteList}>Delete List</button>
         </section>
     )
 }

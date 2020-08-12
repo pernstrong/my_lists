@@ -1,0 +1,12 @@
+.lists-container p {
+    font-size: 1.5rem;
+    /* this text align makes the list cards show center...might be an issue down the line */
+    text-align: center;
+    /* color: red; */
+}
+
+.lists-header {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10%;
+}

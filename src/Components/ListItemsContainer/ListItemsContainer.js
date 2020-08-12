@@ -5,7 +5,7 @@ import ListItem from '../ListItem/ListItem'
 const ListItemsContainer = ({ items }) => {
 
   console.log(items)
-    const itemsToDisplay = items.map(item => <ListItem item={item} />)
+    const itemsToDisplay = items.map(item => <ListItem item={item} key={item} />)
 
 
     return (
