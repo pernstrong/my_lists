@@ -1,12 +1,21 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import ListCard from '../ListCard/ListCard'
 
-const ListsContainer = () => {
+const ListsContainer = ({ lists }) => {
+    console.log(lists)
+    const listsToDisplay = lists.map(list => <ListCard {...list} key={list.id}/>)
 
     return (
         <section className="lists-container">
-            <p>filler for lists container</p>
+            {!lists.length ? <p>Add a list to see it here!</p> : ''}
+            {listsToDisplay}
         </section>
     )
 }
 
-export default ListsContainer
+const mapStateToProps = state => ({
+    lists: state.lists
+})
+
+export default connect(mapStateToProps)(ListsContainer)
