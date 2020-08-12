@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
+
 import ListItemsContainer from '../ListItemsContainer/ListItemsContainer'
+import ListItemForm from '../ListItemForm/ListItemForm'
+
 
 const ListView = ({ lists, title }) => {
     const [ list, updateList ] = useState('')
-    // const [ items, updateItems ] = useState('')
 
     // find list from redux store and store locally
     useEffect(() => {
@@ -12,21 +14,16 @@ const ListView = ({ lists, title }) => {
         updateList(current)
     }, [lists, title])
 
-    // create list items
-    // let itemsToDisplay;
-    
-    // useEffect(() => {
-    //     itemsToDisplay = list.items.map(item => <ListItem item={item} />)
-    // }, [list])
-    
-
     return (
         <section className="list-view">
-            {title}
+            <h3>{title}</h3>
+            {list.items && !list.items.length && <p>Add an item to see it here!</p>}
             {list.items && <ListItemsContainer items={list.items} />}
+            <ListItemForm id={list.id}/>
         </section>
     )
 }
+
 
 const mapStateToProps = state => ({
     lists: state.lists
