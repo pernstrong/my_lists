@@ -1,0 +1,20 @@
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:visited {
+    color: black;
+}
+
+.list-card {
+    border: 1px solid black;
+    width: 80;
+    margin: 5% 10%;
+    border-radius: 5px; 
+    background-color: lightgray;
+}
+
+.list-card p {
+    padding: 1%;
+}
