@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/pernstrong/my_lists.svg?branch=master)](https://travis-ci.com/pernstrong/my_lists)
+
 # MyLists
 
 ## Abstract
