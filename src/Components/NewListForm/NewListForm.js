@@ -16,7 +16,7 @@ const NewListForm = (props) => {
     const createList = () => {
         return ({
             title,
-            items: {}
+            items: []
         })
     }
 
