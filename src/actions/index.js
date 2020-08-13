@@ -8,3 +8,8 @@ export const addItem = (item, id) => ({
     item,
     id
 })
+
+export const deleteList = id => ({
+    type: 'DELETE_LIST',
+    id
+})
