@@ -13,3 +13,9 @@ export const deleteList = id => ({
     type: 'DELETE_LIST',
     id
 })
+
+export const updateItem = (item, id) => ({
+    type: 'UPDATE_ITEM',
+    item,
+    id
+})

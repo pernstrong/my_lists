@@ -8,7 +8,7 @@ const ListItemForm = ({ addItem, id }) => {
 
     const handleClick = e => {
         e.preventDefault()
-        const newItem = {text: item, isComplete: false}        
+        const newItem = {text: item, isComplete: false, id: Date.now()}        
         addItem(newItem, id)
         clearInputs()
     }
