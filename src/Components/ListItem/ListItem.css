@@ -1,7 +1,15 @@
-.complete {
-    text-decoration: line-through;
+.incomplete {
+    /* background-color: lightgray; */
+    font-size: 1.3rem;
+    margin: 5%;
+    border-radius: 5px;
+    text-decoration: none; 
 }
 
-.incomplete {
-    text-decoration: none; 
+.complete {
+    /* background-color: lightgray; */
+    font-size: 1.3rem;
+    margin: 5%;
+    border-radius: 5px;
+    text-decoration: line-through;
 }
