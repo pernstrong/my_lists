@@ -1,0 +1,16 @@
+.list-view h3 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.list-view button {
+    /* float: right; */
+    border-radius: 5px;
+    padding: 2%;
+    display: block;
+}
+
+.list-view p {
+    text-align: center;
+    display: block;
+}

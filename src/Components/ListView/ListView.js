@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './ListView.css'
 import { connect } from 'react-redux'
 import { deleteList, updateItem } from '../../actions'
 import { useHistory } from "react-router-dom";
@@ -11,11 +12,9 @@ import ListItemForm from '../ListItemForm/ListItemForm'
 const ListView = ({ lists, title, deleteList, updateItem }) => {
     const history = useHistory()
     const [ list, updateList ] = useState('')
-    console.log(lists, title, deleteList)
 
     // find list from redux store and store locally
     useEffect(() => {
-        console.log(lists)
         const current = lists.find(list => list.title === title)
         updateList(current)
     }, [lists, title])
@@ -31,10 +30,10 @@ const ListView = ({ lists, title, deleteList, updateItem }) => {
     return (
         <section className="list-view">
             <h3>{title}</h3>
+            <button onClick={handleClick}>Delete List</button>
             {list.items && !list.items.length && <p>Add an item to see it here!</p>}
             {list.items && <ListItemsContainer items={list.items} updateItem={updateItem} listId={list.id}/>}
             <ListItemForm id={list.id}/>
-            <button onClick={handleClick}>Delete List</button>
         </section>
     )
 }
